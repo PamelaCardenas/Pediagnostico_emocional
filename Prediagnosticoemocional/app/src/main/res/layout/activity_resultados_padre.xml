@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_resultados_padre"
+    android:padding="20dp"
+    tools:context=".resultadosPadre">
+
+    <LinearLayout
+        android:id="@+id/lnLyResultadosPadre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnLyNomNinoResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVwNomNinoResu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:text="Nombre Niño:"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtVwNomNinoReusltado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnLyEdadNinoResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVwEdadNinoResu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:text="Edad del Niño:"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtVwEdadNinoReusltado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnLyNomPadreResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVwNomPadreResu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:text="Nombre Padre:"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtVwNomPadreReusltado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#B7F6F4"
+            android:padding="20dp"
+            android:text="Dibujo de familia"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#B7F6F4"
+            android:padding="20dp"
+            android:text="Dominó"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#B7F6F4"
+            android:padding="20dp"
+            android:text="Caras y emociones"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="236dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:padding="10dp"
+            android:text="Resultados"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="173dp"
+            tools:layout_editor_absoluteY="350dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="420dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegActividadesPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtVwAutorFoto"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#8BC34A"
+        android:onClick="regresarPrincipal"
+        android:text="Regresar" />
+
+    <TextView
+        android:id="@+id/txtVwAutorFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Foto por Dave Hoefler en Unsplash"
+        android:textAlignment="textStart" />
+
+</RelativeLayout>

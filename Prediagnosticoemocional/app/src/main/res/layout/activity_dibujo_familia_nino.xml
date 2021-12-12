@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DibujoFamiliaNino">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/areaDibujo"
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        android:layout_marginEnd="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/areaColores"
+        android:layout_above="@id/botonesPrincipales">
+
+        <include layout="@layout/vista_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/areaColores"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toTopOf="@id/botonesPrincipales"
+        android:background="@drawable/diseno_herramientas"
+
+        >
+
+        <Button
+            android:id="@+id/lapiz"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/pencil"
+            android:backgroundTint="#000000"
+            android:onClick="pencil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="25dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/borrador1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/borrador"
+            android:backgroundTint="#000000"
+            android:onClick="borrador"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lapiz"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="70dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/colrojo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#ff0000"
+            android:onClick="redColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/borrador1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="121dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/colamarillo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#FFC82C"
+            android:onClick="yelloColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colrojo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="121dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/colazul"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#3A2CFF"
+            android:onClick="blueColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colamarillo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="121dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/colverde"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#36BD24"
+            android:onClick="greenColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colazul"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="121dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/colnegro"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#000000"
+            android:onClick="blackColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colverde"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="121dp"
+            app:layout_editor_absoluteY="24dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/botonesPrincipales"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/diseno_herramientas"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/regresar"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#13CE66"
+            android:text="Regresar"
+            android:textSize="12sp"
+            android:onClick="regresarActividadesNino"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/dibujoListo"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/diseno_boton"
+            android:backgroundTint="#13CE66"
+            android:text="Listo"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/regresar"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

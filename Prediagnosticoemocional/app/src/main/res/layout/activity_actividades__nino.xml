@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_actividades_1"
+    android:padding="15dp"
+    tools:context=".Actividades_Nino">
+
+    <Button
+        android:id="@+id/btnDibujaFamilia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:padding="25dp"
+        android:onClick="dibujaFamilia"
+        android:backgroundTint="#4AED93"
+        android:text="Dibuja a tu familia" />
+
+    <Button
+        android:id="@+id/btnDomEmociones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFACF2"
+        android:layout_marginTop="50dp"
+        android:padding="25dp"
+        android:layout_below="@id/btnDibujaFamilia"
+        android:text="Dominó de emociones" />
+
+    <Button
+        android:id="@+id/btnCarasEmociones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="25dp"
+        android:layout_below="@id/btnDomEmociones"
+        android:backgroundTint="#FFFE82"
+        android:text="Caras y emociones" />
+
+    <Button
+        android:id="@+id/btnCuentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="25dp"
+        android:layout_below="@id/btnCarasEmociones"
+        android:onClick="cuentos"
+        android:backgroundTint="#87C5FF"
+        android:text="Cuentos" />
+
+    <Button
+        android:id="@+id/btnRegActividadesPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="regresarPrincipal"
+        android:layout_alignEnd="@id/txtVwAutorFoto"
+        android:backgroundTint="#FF9052"
+        android:text="Regresar" />
+
+    <TextView
+        android:id="@+id/txtVwAutorFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Foto por Augustine Wong en Unsplash"
+        android:textAlignment="textStart" />
+
+</RelativeLayout>

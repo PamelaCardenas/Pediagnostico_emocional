@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_main"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtVwBienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:text="Bienvenido"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtVwSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwBienvenido"
+        android:background="#FFFFFF"
+        android:text="Ingresa a tu perfil"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnIngresoNiño"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwSub"
+        android:onClick="actividadesNino"
+        android:layout_marginTop="150dp"
+        android:text="Niño" />
+
+    <Button
+        android:id="@+id/btnIngresoPadre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIngresoNiño"
+        android:onClick="ingresoPadre"
+        android:layout_marginTop="10dp"
+
+        android:text="Padre" />
+
+    <Button
+        android:id="@+id/btnRegistroUsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIngresoPadre"
+        android:layout_marginTop="100dp"
+        android:onClick="registro"
+        android:text="Registro" />
+
+    <TextView
+        android:id="@+id/txtCreditosBackgImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text='Foto por Ray Mallick en Unsplash'
+        android:textAlignment="textEnd" />
+
+
+</RelativeLayout>
