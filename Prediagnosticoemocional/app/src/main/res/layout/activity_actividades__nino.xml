@@ -8,45 +8,84 @@
     android:padding="15dp"
     tools:context=".Actividades_Nino">
 
+    <LinearLayout
+        android:id="@+id/lnLyNomNinoActividades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtVwNomNinoActiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Nombre Niño:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtVwNomNinoActividades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnLyApeNinoActividades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lnLyNomNinoActividades">
+        <TextView
+            android:id="@+id/txtVwApeNinoActiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Apellido Niño:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtVwApeNinoActividades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnDibujaFamilia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:padding="25dp"
         android:onClick="dibujaFamilia"
         android:backgroundTint="#4AED93"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/lnLyApeNinoActividades"
         android:text="Dibuja a tu familia" />
 
     <Button
-        android:id="@+id/btnDomEmociones"
+        android:id="@+id/btnPreguntas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFACF2"
         android:layout_marginTop="50dp"
         android:padding="25dp"
         android:layout_below="@id/btnDibujaFamilia"
-        android:text="Dominó de emociones" />
-
-    <Button
-        android:id="@+id/btnCarasEmociones"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:padding="25dp"
-        android:layout_below="@id/btnDomEmociones"
-        android:backgroundTint="#FFFE82"
-        android:text="Caras y emociones" />
+        android:text="Preguntas" />
 
     <Button
         android:id="@+id/btnCuentos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btnPreguntas"
         android:layout_marginTop="50dp"
-        android:padding="25dp"
-        android:layout_below="@id/btnCarasEmociones"
+        android:backgroundTint="#FFFE82"
         android:onClick="cuentos"
-        android:backgroundTint="#87C5FF"
+        android:padding="25dp"
         android:text="Cuentos" />
 
     <Button

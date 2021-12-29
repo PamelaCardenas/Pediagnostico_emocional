@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_log_nino"
+    android:padding="25dp">
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtContraLogPadre"
+        app:layout_constraintStart_toStartOf="@+id/edTxtContraLogPadre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/txtVwTituloLoginNino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Inicio de sesión Niño"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtVwUserNino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Nombre del Niño (Como se escribió en el Registro)"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/edTxtUserLogNino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVwUserNino"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtVwApellidoNino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edTxtUserLogNino"
+        android:text="Apellido del Niño"
+        android:textAlignment="center" />
+
+
+    <EditText
+        android:id="@+id/edTxtApellidoNino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVwApellidoNino"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnIngresoLogNino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edTxtApellidoNino"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#D55FE6DA"
+        android:onClick="onClick"
+        android:text="Ingresar" />
+
+    <Button
+        android:id="@+id/btnRegresarMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtVwAutorFoto"
+        android:layout_alignParentBottom="true"
+        android:background="#C929040A"
+        android:onClick="onClick"
+        android:text="Regresar"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txtVwAutorFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Photo por Mona Eendra en Unsplash"
+        android:textAlignment="textStart" />
+
+
+</RelativeLayout>

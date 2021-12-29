@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-//Clase para crear la tabla de los usuarios registrados
+//Clase para declarar las sentencias de SQL, crear la base de datos y la tabla donde se van a almacenar los datos de ingreso de usuarios
 
 public class daoUsuario {
 
@@ -20,6 +20,7 @@ public class daoUsuario {
     String tablaDel="drop table usuario";
     String tabla="create table if not exists usuario(id integer primary key autoincrement, nombreNino text, apNino text, edadNino text, nombrePadre text, apPadre text, usuario text, pass text)";
 
+    //Constructor
     public daoUsuario(Context c){
         this.c=c;
         sql=c.openOrCreateDatabase(bd, c.MODE_PRIVATE, null);
@@ -82,7 +83,7 @@ public class daoUsuario {
         return lista;
     }
 
-    //Metodo login para verificar el usuario que se quiere ingresar para entrar a la aplicacion
+    //Metodo login para verificar el usuario del padre que se quiere ingresar para entrar a la aplicacion
     public int login(String u, String p){
         int a=0;
         Cursor cr=sql.rawQuery("select * from usuario", null);
@@ -96,6 +97,21 @@ public class daoUsuario {
         return a;
     }
 
+    //Metodo login para verificar el nombre del Niño vinculado al usuario del padre que se requiere ingresar para entrar a la aplicacion
+    public int loginNino(String nN, String aN){
+        int b=0;
+        Cursor cr=sql.rawQuery("select * from usuario", null);
+        if(cr!=null&&cr.moveToFirst()){
+            do{
+                if(cr.getString(1).equals(nN)&&cr.getString(2).equals(aN)){
+                    b++;
+                }
+            }while(cr.moveToNext());
+        }
+        return b;
+    }
+
+    //Metodo para regresar el usuario del padre obteniendo el nombre de usuario y la contraseña
     public Usuario getUsuario(String u, String p){
         lista=selectUsuarios();
         for (Usuario us:lista) {
@@ -106,6 +122,18 @@ public class daoUsuario {
         return null;
     }
 
+    //Metodo para regresar el usuario del padre obteniendo el nombre del niño y el apellido
+    public Usuario getUsuarioNino(String nN, String aN){
+        lista=selectUsuarios();
+        for (Usuario us:lista) {
+            if(us.getNombreNino().equals(nN)&&us.getApellidoNino().equals(aN)){
+                return us;
+            }
+        }
+        return null;
+    }
+
+    //Metodo para regresar el usuario del padre obteniendo el id
     public Usuario getUsuarioById(int id){
         lista=selectUsuarios();
         for (Usuario us:lista) {

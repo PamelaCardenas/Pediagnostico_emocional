@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class acivity_log_padre extends AppCompatActivity implements View.OnClickListener{
 
+    //Se crean las variables de los objetos
     Intent inRegresarPrincipal, inResultadosPadre;
     EditText usrPadre, passPadre;
     Button btnIngresar, btnRegLoginPadre;
@@ -23,14 +24,18 @@ public class acivity_log_padre extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acivity_log_padre);
 
+        //Declarar las variables vinculandolas al id de los objetos del layout
+
         usrPadre=(EditText)findViewById(R.id.edTxtUserLogPadre);
         passPadre=(EditText)findViewById(R.id.edTxtContraLogPadre);
 
         btnIngresar=(Button)findViewById(R.id.btnIngresoLogPadre);
         btnRegLoginPadre=(Button)findViewById(R.id.btnRegresarLoginPadre);
 
+        //Objeto de la clase dao usuario
         dao=new daoUsuario(this);
 
+        //Declarar eventos onClick al presionar un boton
         btnIngresar.setOnClickListener(this);
         btnRegLoginPadre.setOnClickListener(this);
     }
@@ -41,9 +46,10 @@ public class acivity_log_padre extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnIngresoLogPadre:
-                //Metodo para entrar a la aplicacion
+                //Metodo para entrar a la aplicacion con Login
                 String u = usrPadre.getText().toString();
                 String p = passPadre.getText().toString();
+                //Comparativa si los campos estan vacios no deja entrar, manda error
                 if(u.equals("")&&p.equals("")){
                     Toast.makeText(this,"ERROR, Campos vacios", Toast.LENGTH_LONG).show();
                 //Si se encuentra un usuario y contraseña con esos datos ingresados, se podra entrar a la aplicacion
@@ -61,6 +67,7 @@ public class acivity_log_padre extends AppCompatActivity implements View.OnClick
                 }
                 break;
             case R.id.btnRegresarLoginPadre:
+                //Botón para regresar a la pantalla anterior
                 inRegresarPrincipal = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(inRegresarPrincipal);
                 finish();

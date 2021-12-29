@@ -20,15 +20,64 @@
         android:textSize="36sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:id="@+id/lnLyNomNinoCuentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/txtVWCuentos"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtVwNomNinoCuent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Nombre Niño:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtVwNomNinoCuentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnLyApeNinoCuentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lnLyNomNinoCuentos">
+        <TextView
+            android:id="@+id/txtVwApeNinoCuen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Apellido Niño:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtVwApeNinoCuentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnCuento1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#D8C0F9"
         android:text='Cuento 1 ""'
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:padding="20dp"
-        android:layout_below="@id/txtVWCuentos"/>
+        android:layout_below="@id/lnLyApeNinoCuentos"/>
 
     <Button
         android:id="@+id/btnCuento2"

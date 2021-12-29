@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent inIngresoPadre, actividadesNino, inRegistro;
+    Intent inIngresoPadre, loginNino, inRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Método para ir del menú principal a las actividades del niño
-    public void actividadesNino(View view){
-        actividadesNino = new Intent(getApplicationContext(), Actividades_Nino.class);
-        startActivity(actividadesNino);
+    public void loginNino(View view){
+        loginNino = new Intent(getApplicationContext(), log_Nino.class);
+        startActivity(loginNino);
         finish();
     }
 
