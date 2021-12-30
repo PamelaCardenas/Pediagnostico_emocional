@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class Actividades_Nino extends AppCompatActivity {
 
     //Se crean las variables de los objetos
-    Intent inRegresarPrincipal, inDibujaFam, inCuentos;
+    Intent inRegresarPrincipal, inDibujaFam, inCuentos, inPreguntas;
     TextView txtVwApeNinoAct, txtVwNomNinoAct;
     int id=0;
     Usuario u;
@@ -79,6 +79,21 @@ public class Actividades_Nino extends AppCompatActivity {
         inCuentos = new Intent(getApplicationContext(), cuentos.class);
         inCuentos.putExtra("id", ux.getId());
         startActivity(inCuentos);
+        finish();
+    }
+
+    //Método para pasar de la pantalla de las actividades del niño, a la actividad de las preguntas
+    public void preguntas(View view){
+
+        //Se guardan en variables los datos almacenados del niño
+        String nN = txtVwNomNinoAct.getText().toString();
+        String aN = txtVwApeNinoAct.getText().toString();
+        Usuario ux = dao.getUsuarioNino(nN, aN);
+
+        //Se llama un intento para abrir la nueva activity de las preguntas y se pasa el id del usuario que inicio sesion
+        inPreguntas = new Intent(getApplicationContext(), TestPreguntas.class);
+        inPreguntas.putExtra("id", ux.getId());
+        startActivity(inPreguntas);
         finish();
     }
 }

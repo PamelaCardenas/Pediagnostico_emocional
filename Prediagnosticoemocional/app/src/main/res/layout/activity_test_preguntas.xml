@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/background_actividades_1"
-    android:padding="15dp"
-    tools:context=".Actividades_Nino">
+    android:background="@color/cardview_light_background"
+    android:padding="25dp"
+    tools:context=".TestPreguntas">
+
+    <TextView
+        android:id="@+id/tituloTestEmociones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Identifica emociones"
+        android:textColor="#000000"
+        android:textSize="36sp" />
 
     <LinearLayout
         android:id="@+id/lnLyNomNinoActividades"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:layout_below="@+id/tituloTestEmociones"
         android:orientation="horizontal">
 
         <TextView
@@ -56,55 +67,22 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnDibujaFamilia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="25dp"
-        android:onClick="dibujaFamilia"
-        android:backgroundTint="#4AED93"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/lnLyApeNinoActividades"
-        android:text="Dibuja a tu familia" />
-
-    <Button
-        android:id="@+id/btnPreguntas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFACF2"
-        android:layout_marginTop="50dp"
-        android:padding="25dp"
-        android:layout_below="@id/btnDibujaFamilia"
-        android:onClick="preguntas"
-        android:text="Preguntas" />
-
-    <Button
-        android:id="@+id/btnCuentos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnPreguntas"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="#FFFE82"
-        android:onClick="cuentos"
-        android:padding="25dp"
-        android:text="Cuentos" />
-
-    <Button
-        android:id="@+id/btnRegActividadesPrincipal"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:onClick="regresarPrincipal"
-        android:layout_alignEnd="@id/txtVwAutorFoto"
-        android:backgroundTint="#FF9052"
-        android:text="Regresar" />
+        android:layout_above="@id/btnSiguiente"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Lee la situación que se te presenta y di cómo te sientes"
+        android:textColor="#000000"
 
-    <TextView
-        android:id="@+id/txtVwAutorFoto"
-        android:layout_width="match_parent"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Foto por Augustine Wong en Unsplash"
-        android:textAlignment="textStart" />
+        android:layout_centerInParent="true"
+        android:text="Siguiente"/>
 
 </RelativeLayout>
