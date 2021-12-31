@@ -53,4 +53,18 @@ public class cuentos extends AppCompatActivity {
         startActivity(inRegresarActividadesNino);
         finish();
     }
+
+    public void cuento1(View view){
+
+        //Se guardan en variables los datos almacenados del niño
+        String nN = u.getNombreNino();
+        String aN = u.getApellidoNino();
+        Usuario ux = dao.getUsuarioNino(nN,aN);
+
+        //Se llama un intento para regresar al activity de las actividades y se pasa el id del usuario que inicio sesion
+        inRegresarActividadesNino = new Intent(getApplicationContext(), Cuento1.class);
+        inRegresarActividadesNino.putExtra("id", ux.getId());
+        startActivity(inRegresarActividadesNino);
+        finish();
+    }
 }

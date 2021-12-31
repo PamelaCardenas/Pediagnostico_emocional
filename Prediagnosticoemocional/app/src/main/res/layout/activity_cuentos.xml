@@ -74,8 +74,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#D8C0F9"
-        android:text='Cuento 1 ""'
+        android:text='Cuento 1 "La tortuga manuelita"'
         android:layout_marginTop="25dp"
+        android:onClick="cuento1"
         android:padding="20dp"
         android:layout_below="@id/lnLyApeNinoCuentos"/>
 

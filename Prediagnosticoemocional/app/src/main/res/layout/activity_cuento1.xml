@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="25dp"
+    android:layout_height="match_parent"
+    tools:context=".Cuento1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La tortuga Manuelita"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="219dp"
+                tools:layout_editor_absoluteY="86dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuento para ayudar a los niños a manejar sus enfados"
+                android:textAlignment="center"
+                android:textColor="#101010"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imgVwC1TortMan"
+                android:layout_width="match_parent"
+                android:layout_height="228dp"
+                android:padding="15dp"
+                app:srcCompat="@drawable/tortugamanuelita1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="o"
+                    android:text="PLAY" />
+
+                <Button
+                    android:id="@+id/btnPausa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PAUSA" />
+
+                <Button
+                    android:id="@+id/btnStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="STOP" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manuelita era una tortuga encantadora, pero tenía un pequeño defecto: se enfadaba con facilidad, y cuando se enfadaba, se ponía tan nerviosa que comenzaba a gritar y a patalear sin parar. Ella lo pasaba muy mal, y el resto no sabía cómo ayudarla.\n
+\n
+Manuelita cuando se enfadaba era capaz de hacer cosas que no quería, como romper papeles en medio de la clase o incluso intentar pegar a alguno de sus compañeros. Luego se arrepentía mucho, pero no era capaz de encontrar la solución. Así que a Manuelita, cada vez le costaba más ir al colegio, y su rabia crecía y crecía sin control.\n
+\n
+También le pasaba en su casa, con sus padres. Hasta que un día, les visitó su querida abuela Margarita, que llevaba mucho tiempo sin verla. A Manuelita le encantaba hablar con su abuela. Era muy vieja y sabía muchas cosas. Y su abuela, que notó que Manuelita estaba un poco tristona, le preguntó. La tortuga le explicó lo que pasaba, y su abuela, le dijo con dulzura:\n
+\n
+– ¡Ah! ¿Es eso? Pues tienes suerte, porque la solución a tus problemas la llevas encima.\n
+\n
+– ¿Encima? ¿Cómo que encima?- contestó extrañada Manuelita- ¡Yo no veo nada!\n
+\n
+– Claro que lo ves: es tu caparazón.\n
+\n
+Manuelita miró a su abuela con algunas dudas:\n
+\n
+– ¿Mi caparazón? ¿Y qué tiene que ver? No lo entiendo…\n
+\n
+– Muy fácil, Manuelita- dijo entonces su abuela– Cada vez que te enfades, solo tienes que meterte dentro del caparazón y contar hasta diez. Cuando salgas, las cosas te parecerán diferentes y notarás que tu enfado es menor.\n
+\n
+– ¿En serio?- contestó con los ojos muy abiertos la tortuga.\n
+\n
+Estaba realmente impresionada. Deseaba probar la técnica de su abuela, porque todos los consejos que le había dado hasta ese momento… ¡habían sido fantásticos!\n
+"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="213dp"
+                android:padding="15dp"
+                app:srcCompat="@drawable/tortugamanuelita2" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Al día siguiente, Manuelita fue algo más contenta al colegio. Estaba un poco nerviosa, pero esperaba poder controlar su enfado gracias a la técnica de su abuela.\n
+\n
+Y el momento llegó en la clase de gimnasia: una de sus compañeras le lanzó la pelota con tan mala suerte que le dio en la cabeza. Manuelita se enfadó muchísimo. Estaba taaan enfadadaaa que deseaba insultar a su compañera. Pero entonces recordó lo que le dijo su abuela, y decidió meterse en el caparazón. Allí, refugiada y a oscuras, comenzó a contar despacito:\n
+\n
+– Unooo, doooos, tres….\n
+\n
+Y cuando Manuelita llegó a diez, sacó la cabeza y sintió que se sentía muchísimo mejor. Al fin y al cabo, su compañera no había querido darle ‘a posta’, sino que había sido un accidente. Ahora lo veía todo mucho más claro.\n
+\n
+– No te preocupes, Clotilde, que sé que no lo hiciste a propósito- dijo Manuelita.\n
+\n
+Sus compañeros de clase y la profesora se quedaron asombrados, e incluso, la aplaudieron. ¡Manuelita ya era capaz de controlar sus enfados!\n"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
