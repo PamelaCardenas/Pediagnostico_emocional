@@ -1,1 +1,1 @@
-# Pediagnostico_emocional
+# Prediagnostico_emocional
